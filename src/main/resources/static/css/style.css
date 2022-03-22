@@ -1,0 +1,157 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+.page-head {
+    background-color: rgb(74, 47, 226);
+    color: white;
+    text-align: center;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+.head-image img {
+    height: 120px;
+    margin: 20px;
+}
+.head-text {
+    display: grid;
+    grid-template-rows: 60% 40%;
+}
+.head-text h1 {
+    font-size: 3rem;
+    margin: 20px;
+}
+.head-text h3 {
+    font-size: 1.5rem;
+    margin: 0 0 10px 0;
+}
+
+@media screen and (max-width: 1100px) {
+    .page-head {
+        display: block;
+    }
+}
+
+/* Nav */
+nav {
+    background-color: rgb(112, 131, 241);
+    padding: 20px;
+    margin: auto;
+}
+nav a {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 20px;
+}
+nav a:hover {
+    color: black;
+}
+#logo-home {
+    height: 30px;
+}
+
+/* Main table */
+.welcome-message {
+    text-align: center;
+    font-size: 2rem;
+}
+.back {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 20px 20px 20px 0;
+}
+.back a {
+    color: rgb(74, 47, 226);
+    padding: 20px;
+    text-decoration: none;
+}
+.back img {
+    height: 20px;
+    margin: 0 20px 0 0;
+}
+.back a:hover {
+    background-color: rgb(74, 47, 226);
+    color: white;
+}
+.content-table {
+    text-align: center;
+    font-size: 1.5rem;
+}
+main h2, .content-form h2 {
+    text-align: center;
+    color: darkblue;
+    font-size: 2rem;
+}
+.content-table table {
+    text-align: left;
+    border-collapse: collapse;
+    border: 2px solid darkblue;
+    margin: auto;
+}
+.content-table tr:nth-child(even) {
+    background-color: #c7daf7;
+}
+.content-table th, .content-table td {
+    border: 1px solid rgb(140, 170, 194);
+    padding: 10px 15px 10px 15px;
+    font-size: 1.5rem;
+}
+.content-table th {
+    background-color: darkblue;
+    color: white;
+    text-transform: uppercase;
+}
+.content-table a {
+    color: black;
+    text-decoration: none;
+}
+.content-table tr:hover {
+    background-color: rgb(140, 170, 194);
+}
+
+/* Main form */
+.content-form {
+    text-align: center;
+}
+.content-form form {
+    display: grid;
+}
+.content-form label, .content-form p {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+.content-form input {
+    margin: 5px auto 20px auto;
+    padding: 10px;
+    width: 350px;
+    font-size: 1rem;
+}
+input[type="radio"] {
+    width: auto;
+    margin: 5px 30px 15px 5px;
+}
+input[type="submit"] {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* Erreur */
+.errorField {
+    border-color: red;
+}
+.errorMsg {
+    color: red;
+    font-size: 1.5rem;
+    margin: -15px 0 20px 0;
+}
+
+/* Footer */
+.contact-information {
+    margin: 20px;
+    text-align: center;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <header id="title">
+        <div class="page-head">
+            <div class="head-image">
+                <img id="logo-esi" th:src="@{/images/logo.jpeg}"/>
+            </div>
+            <div class="head-text">
+                <h1>Programme annuel des étudiants</h1>
+                <h3>HE2B-ESI / WEBG5 / 52977 / 2021-2022</h3>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="menus">
+            <a th:href="@{/}"><img id="logo-home" th:src="@{/images/home.png}"></a>
+            <a th:href="@{/courses}">Cours</a>
+            <a th:href="@{/students}">Etudiants</a>
+        </div>
+    </nav>
+
+    <main layout:fragment="content">
+        Contenu remplacé
+    </main> 
+
+    <footer>
+        <div class="contact-information">
+            Maximilien Faucon 52977 - 52977@etu.he2b.be
+        </div>
+    </footer>
+</body>
+</html>

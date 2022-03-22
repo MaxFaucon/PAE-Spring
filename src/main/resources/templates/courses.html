@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layouts/layout}">
+
+<head>
+    <title>Courses</title>
+</head>
+
+<body>
+    <main layout:fragment="content">
+        <h2>Liste des cours</h2>
+        <div th:replace="~{fragments/course-table.html::div}"></div>
+
+        <div class="content-form">
+            <h2>Ajouter un cours</h2>
+
+            <form id="course-form" th:action="@{/courses/add}" th:object="${course}" method="post">
+                <label for="id">Sigle</label>
+                <input type="text" id="id" placeholder="Entrez le sigle du cours..." th:field="*{id}"
+                    th:errorclass="errorField" />
+                <span th:errors="*{id}" class="errorMsg"></span>
+                <br>
+
+                <label for="course-title">Titre</label>
+                <input type="text" id="course-title" placeholder="Entrez le titre du cours..." th:field="*{title}"
+                    th:errorclass="errorField" />
+                <span th:errors="*{title}" class="errorMsg"></span>
+                <br>
+
+                <label for="credits">ECTS</label>
+                <input type="number" id="credits" min="0" max="30" th:field="*{credits}" th:errorclass="errorField"/>
+                <span th:errors="*{credits}" class="errorMsg"></span>
+                <br>
+
+                <input type="submit" value="Ajouter"/>
+            </form>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

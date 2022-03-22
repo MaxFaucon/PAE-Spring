@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layouts/layout}">
+<head>
+    <title>Details</title>
+</head>
+<body>
+    <main layout:fragment="content">
+        <div class="back">
+            <a th:href="@{/students}"><img id="logo-back" th:src="@{/images/back.png}">Retour à la liste des étudiants</a>
+        </div>
+
+        <h2>
+            <span th:text="${studentDetails.matricule}"></span>
+             - 
+            <span th:text="${studentDetails.name}"></span>
+        </h2>
+
+        <div th:replace="~{fragments/course-table.html::div}"></div>
+
+        <div class="content-form">
+            <h2>Ajouter un cours</h2>
+
+            <form id="studentsDetails-form" th:action="@{/students/{studentId}/details/add(studentId=${studentDetails.matricule})}" 
+                method="post" th:object="${course}">
+                <label for="course-id">Sigle du cours</label>
+                <input type="text" id="course-id" th:field="*{id}"/>
+                <input type="submit" value="Ajouter"/>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
